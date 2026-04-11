@@ -41,6 +41,8 @@ h3 {
 .container {   
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
     align-items: center;
     font-family: 'Arial', sans-serif;
     background-image: url('https://i.postimg.cc/ZR5RM322/beautiful-mountains-landscape.jpg');
@@ -53,16 +55,15 @@ h3 {
 }
 #nameList {
     counter-reset: fantasy-counter; 
-    list-style: none;              
+    list-style: none;
+    margin-top: 0;              
     padding: 10px;
     min-height: 100vh;
     background-image: url(https://cdn.phototourl.com/free/2026-04-05-bff3e1a7-6b47-4f4f-9f78-20786f234cae.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 80%;
-    background-attachment: fixed;
-
-       
+    background-attachment: fixed;       
 }
 
 #nameList li {
@@ -106,15 +107,26 @@ input[type="text"] {
 }
 .search-controls {
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;     
     gap: 10px;               
     width: 100%;
     margin-bottom: 20px;
+    flex-wrap: wrap; 
 }
-button {
-    display: inline-flex;
+.button-group {
+    display: flex;          
+    flex-direction: row;    
+    justify-content: center;
+    gap: 15px;              
+    width: auto;
+}            
+.buttonreset, .buttonsearch {
+    display: flex;
+    flex-direction: row;
     margin:0;
+    gap: 20px;
     padding: 5px 15px;
     border: 2px solid #06832b;
     box-shadow: 4px 4px 5px #07e249;
@@ -124,6 +136,41 @@ button {
     background-color: #c2ec7e;
     color: #070707;
     cursor: pointer;
+}
+.gen-btn {
+    display: flex;
+    margin:0;
+    gap: 20px;
+    padding: 5px 15px;
+    border: 2px solid #06832b;
+    box-shadow: 4px 4px 5px #07e249;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: comic sans ms, cursive, sans-serif;
+    background-color: #c2ec7e;
+    color: #070707;
+    cursor: pointer;
+}
+.generator-box {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin: 1px 0;
+    width: 100%;
+    background: #8f3dbe;
+    border : 2px solid #080808;
+    border-radius: 8px; 
+}
+#displayGeneratedName {
+    font-family: 'Georgia', serif;
+    color: #98d9ec;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    letter-spacing: 1px;
 }
 @media (max-width: 600px) {
     .search-controls {
