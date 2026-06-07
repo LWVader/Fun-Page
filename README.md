@@ -1,1 +1,1 @@
-# Form2
+The Great Index of Improbable Names is a dynamic web application that allows users to generate and manage creative, fictional, or unusual names. Built using a clean and modular layout, the interface offers instant generation
